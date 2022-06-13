@@ -186,6 +186,6 @@ async def message_handler(client: Client, message: Message):
 print("Starting...")
 bot.start()
 print("Ready.")
-bot.send_message(bot_admin_group, "Bot reiniciado.")
+#bot.send_message(bot_admin_group, "Bot reiniciado.")
 loop: asyncio.AbstractEventLoop = asyncio.get_event_loop_policy().get_event_loop()
 loop.run_forever()
